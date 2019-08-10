@@ -1,0 +1,126 @@
+Welcome to the Emacs shell
+
+~/Desktop/cBasicGcc/homeWork $ gcc ex31.c -o ex31
+~/Desktop/cBasicGcc/homeWork $ ./ex31
+nhap so hoa: 3
+Aol mvjbz pz vu aol tvaoly av aol jopsk'z lkbjhapvu. Nlythu zvjphs dlsmhyl pz clyf nvvk, zv tvza vm aol Nlythu tvaoly pu aol mpyza mld flhyz hmaly aol ipyao vm h jopsk dpao h jopsk,Nlythuz ilsplcl aoha aol yvsl vm aol tvaoly vm aol jopsk'z nyvdao ohz hu ptwvyahua wvzpapvu, zv aol Nlythu mbss-aptl tvaoly huk lclu av aolpy vdu hz h tvaoly wyvbk. Zv dolu aolf thrl aol lmmvya av thrl aol jopsk, pa hszv ylclhsz aol dpzkvt vm lclyfdolyl:
+Zlsm-ylsphujl myvt aol ilnpuupun vm aol tlhs
+ 
+Dolu aol ihif jhu ovsk ahisldhyl myvt aolpy tlhsz, jhu zpa av jopskylu av lha aolpy vdu tlhsz pu aol zavvs, tvaolyz hyl mbssf wylwhylk av jslhu bw aol tlzz. If aol hnl vm 3, fvb jhu ohcl kpuuly ha aol kpuuly ahisl dpao aol hkbsaz. Aol tvza ptwvyahua aopun pz aoha aolf kv uva mllk, kv uva mvyjl jopskylu av lha, tf tvaoly kljpklk av wylwhyl doha ubaypapvu mvvk, kv uva lha, ovd av lha kljpklk if aol jopsk. Huk Jopuh'z hkbsaz hyl hsdhfz dvyyplk hivba aol jopsk pz avv zthss av kv zao vcly huk vcly hnhpu, uva luvbno av lha, wlvwsl aohu vby Jopulzl jopskylu nyvd zayvunly?
+ ~/Desktop/cBasicGcc/homeWork $ gcc ex31.c -o ex31
+ex31.c:41:13: error: use of undeclared identifier 'str'
+      if( ((str[i]-n) < 'a' && str[i] >= str[i] >= 'a' && str[i] <= 'z' ) || ((...
+            ^
+ex31.c:41:32: error: use of undeclared identifier 'str'
+      if( ((str[i]-n) < 'a' && str[i] >= str[i] >= 'a' && str[i] <= 'z' ) || ((...
+                               ^
+ex31.c:41:42: error: use of undeclared identifier 'str'
+      if( ((str[i]-n) < 'a' && str[i] >= str[i] >= 'a' && str[i] <= 'z' ) || ((...
+                                         ^
+ex31.c:41:59: error: use of undeclared identifier 'str'
+      if( ((str[i]-n) < 'a' && str[i] >= str[i] >= 'a' && str[i] <= 'z' ) || ((...
+                                                          ^
+ex31.c:41:80: error: use of undeclared identifier 'str'
+  ...< 'a' && str[i] >= str[i] >= 'a' && str[i] <= 'z' ) || ((str[i]-n) <'A' && str[...
+                                                              ^
+ex31.c:41:98: error: use of undeclared identifier 'str'
+  ...>= str[i] >= 'a' && str[i] <= 'z' ) || ((str[i]-n) <'A' && str[i] >= 'A' && str...
+                                                                ^
+ex31.c:41:115: error: use of undeclared identifier 'str'
+  ...&& str[i] <= 'z' ) || ((str[i]-n) <'A' && str[i] >= 'A' && str[i] <= 'Z') ){
+                                                                ^
+ex31.c:42:9: error: use of undeclared identifier 'str'
+        str[i] = str[i] -n +26 *( n/26 + 1 );
+        ^
+ex31.c:42:18: error: use of undeclared identifier 'str'
+        str[i] = str[i] -n +26 *( n/26 + 1 );
+                 ^
+ex31.c:44:15: error: use of undeclared identifier 'str'
+         if ((str[i] >= 'a' && str[i] <= 'z') || (str[i] >= 'A' && str[i] <= 'Z'))
+              ^
+ex31.c:44:32: error: use of undeclared identifier 'str'
+         if ((str[i] >= 'a' && str[i] <= 'z') || (str[i] >= 'A' && str[i] <= 'Z'))
+                               ^
+ex31.c:44:51: error: use of undeclared identifier 'str'
+         if ((str[i] >= 'a' && str[i] <= 'z') || (str[i] >= 'A' && str[i] <= 'Z'))
+                                                  ^
+ex31.c:44:68: error: use of undeclared identifier 'str'
+         if ((str[i] >= 'a' && str[i] <= 'z') || (str[i] >= 'A' && str[i] <= 'Z'))
+                                                                   ^
+ex31.c:46:13: error: use of undeclared identifier 'str'
+            str[i] += n;
+            ^
+ex31.c:88:5: warning: implicitly declaring library function 'exit' with type 'void
+      (int) __attribute__((noreturn))' [-Wimplicit-function-declaration]
+    exit(1);
+    ^
+ex31.c:88:5: note: include the header <stdlib.h> or explicitly provide a declaration
+      for 'exit'
+1 warning and 14 errors generated.
+~/Desktop/cBasicGcc/homeWork $ gcc ex31.c -o ex31
+ex31.c:41:49: warning: comparison of constant 97 with boolean expression is always
+      false [-Wtautological-constant-out-of-range-compare]
+      if( ((str[i]-n) < 'a' && str[i] >= str[i] >= 'a' && str[i] <= 'z' ) || ((...
+                               ~~~~~~~~~~~~~~~~ ^  ~~~
+ex31.c:88:5: warning: implicitly declaring library function 'exit' with type 'void
+      (int) __attribute__((noreturn))' [-Wimplicit-function-declaration]
+    exit(1);
+    ^
+ex31.c:88:5: note: include the header <stdlib.h> or explicitly provide a declaration
+      for 'exit'
+2 warnings generated.
+~/Desktop/cBasicGcc/homeWork $ gcc ex31.c -o ex31
+ex31.c:88:5: warning: implicitly declaring library function 'exit' with type 'void
+      (int) __attribute__((noreturn))' [-Wimplicit-function-declaration]
+    exit(1);
+    ^
+ex31.c:88:5: note: include the header <stdlib.h> or explicitly provide a declaration
+      for 'exit'
+1 warning generated.
+~/Desktop/cBasicGcc/homeWork $ gcc ex31.c -o ex31
+ex31.c:88:5: warning: implicitly declaring library function 'exit' with type 'void
+      (int) __attribute__((noreturn))' [-Wimplicit-function-declaration]
+    exit;
+    ^
+ex31.c:88:5: note: include the header <stdlib.h> or explicitly provide a declaration
+      for 'exit'
+ex31.c:88:5: warning: expression result unused [-Wunused-value]
+    exit;
+    ^~~~
+2 warnings generated.
+~/Desktop/cBasicGcc/homeWork $ gcc ex31.c -o ex31
+~/Desktop/cBasicGcc/homeWork $ ./ex31
+nhap so hoa: 3
+Wkh irfxv lv rq wkh prwkhu wr wkh fklog'v hgxfdwlrq. Jhupdq vrfldo zhoiduh lv yhub jrrg, vr prvw ri wkh Jhupdq prwkhu lq wkh iluvw ihz bhduv diwhu wkh eluwk ri d fklog zlwk d fklog,Jhupdqv eholhyh wkdw wkh uroh ri wkh prwkhu ri wkh fklog'v jurzwk kdv dq lpsruwdqw srvlwlrq, vr wkh Jhupdq ixoo-wlph prwkhu dqg hyhq wr wkhlu rzq dv d prwkhu surxg. Vr zkhq wkhb pdnh wkh hiiruw wr pdnh wkh fklog, lw dovr uhyhdov wkh zlvgrp ri hyhubzkhuh:
+Vhoi-uholdqfh iurp wkh ehjlqqlqj ri wkh phdo
+ 
+Zkhq wkh edeb fdq krog wdeohzduh iurp wkhlu phdov, fdq vlw wr fkloguhq wr hdw wkhlu rzq phdov lq wkh vwrro, prwkhuv duh ixoob suhsduhg wr fohdq xs wkh phvv. Eb wkh djh ri 3, brx fdq kdyh glqqhu dw wkh glqqhu wdeoh zlwk wkh dgxowv. Wkh prvw lpsruwdqw wklqj lv wkdw wkhb gr qrw ihhg, gr qrw irufh fkloguhq wr hdw, pb prwkhu ghflghg wr suhsduh zkdw qxwulwlrq irrg, gr qrw hdw, krz wr hdw ghflghg eb wkh fklog. Dqg Fklqd'v dgxowv duh dozdbv zruulhg derxw wkh fklog lv wrr vpdoo wr gr vwk ryhu dqg ryhu djdlq, qrw hqrxjk wr hdw, shrsoh wkdq rxu Fklqhvh fkloguhq jurz vwurqjhu?
+ ban co muon giai ma file nguon khong?
+ yes: 1 ? no: 0?
+ hay lua chon: 1
+~/Desktop/cBasicGcc/homeWork $ gcc ex31.c -o ex31
+~/Desktop/cBasicGcc/homeWork $ ./ex31
+nhap so hoa: 5
+ban co muon giai ma file nguon khong?
+ yes: 1 ? no:
+
+
+
+
+
+./
+~/Desktop/cBasicGcc/homeWork $ gcc ex31.c -o ex31
+~/Desktop/cBasicGcc/homeWork $ ./ex31
+nhap so hoa: 5
+ban co muon giai ma file nguon khong?
+ yes: 1 ? no: 0?
+ hay lua chon: 1
+~/Desktop/cBasicGcc/homeWork $ gcc ex31.c -o ex31
+~/Desktop/cBasicGcc/homeWork $ ./ex31
+nhap so hoa: 5
+ma hoa file nguon hoan thanh
+ban co muon giai ma file nguon khong?
+ yes: 1 ? no: 0?
+ hay lua chon: 1
+giai ma file nguon hoan thanh
+~/Desktop/cBasicGcc/homeWork $ 

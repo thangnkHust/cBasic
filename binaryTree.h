@@ -1,0 +1,153 @@
+// typedef struct{
+// 	// int id;
+// 	char country[20];
+// }team;
+
+typedef int elementtype;
+
+typedef struct node{
+	elementtype element;
+	struct node *leftChild;
+	struct node *rightChild;
+}node;
+
+typedef node *treeType;
+
+void initalize(treeType *T){
+	*T = NULL;
+}
+
+treeType makeNewNode(elementtype e){
+	treeType new = (node*)malloc(sizeof(node));
+	new->element = e;
+	new->leftChild = NULL;
+	new->rightChild = NULL;
+	return new;
+}
+
+int leaf(treeType T){
+	if(T != NULL){
+		return (T->leftChild == NULL && T->rightChild == NULL);
+	}
+	return 0;
+}
+
+int countTree(treeType T){
+	if(T == NULL) return 0;
+	return 1 + countTree(T->leftChild) + countTree(T->rightChild);
+}
+
+treeType creatFrom2Tree(treeType left, treeType right, elementtype e){
+	// creat 1 tree from 2 tree
+	treeType new = makeNewNode(e);
+	new->leftChild = left;
+	new->rightChild = right;
+	return new;
+}
+
+void insertMostLeft(treeType *T, elementtype e){
+	// insert most left on tree T
+	treeType new = makeNewNode(e);
+	if(*T == NULL) *T= new;
+	else{
+		treeType tmp = *T;
+		while(tmp->leftChild != NULL){
+			tmp = tmp->leftChild;
+		}
+		tmp->leftChild = new;
+	}
+}
+
+void insertMostRight(treeType *T, elementtype e){
+	// insert most right on tree T
+	treeType new = makeNewNode(e);
+	if(*T == NULL) *T = new;
+	else{
+		treeType tmp = *T;
+		while(tmp->rightChild != NULL){
+			tmp = tmp->rightChild;
+		}
+		tmp->rightChild = new;
+	}
+}
+
+treeType find(treeType T, elementtype x){
+	// find and return node x
+	if(T == NULL) return NULL;
+	if(T->element == x) return T;
+	node *tmp;
+	tmp = find(T->leftChild, x);
+	if(tmp == NULL)
+		tmp = find(T->rightChild, x);
+	return tmp;
+}
+
+void insertLeft(treeType *T, elementtype x, elementtype e){
+	// insert left node x 1 node e
+	if(*T == NULL) return;
+	node *tmp = find(*T, x);
+	if(tmp == NULL) return;
+	node *new = makeNewNode(e);
+	tmp->leftChild = new;
+}
+
+void insertRight(treeType *T, elementtype x, elementtype e){
+	// insert rigt node x 1 node e
+	if(*T == NULL) return;
+	node *tmp = find(*T, x);
+	if(tmp == NULL) return;
+	node *new = makeNewNode(e);
+	tmp->rightChild = new;
+}
+
+void preOder(treeType T){
+	if(T != NULL){
+		printf("%d ", T->element);
+		preOder(T->leftChild);
+		preOder(T->rightChild);
+	}
+}
+
+void inOder(treeType T){
+	if(T != NULL){
+		inOder(T->leftChild);
+		printf("%d ", T->element);
+		inOder(T->rightChild);
+	}
+}
+
+void postOder(treeType T){
+	if(T != NULL){
+		postOder(T->leftChild);
+		postOder(T->rightChild);
+		printf("%d ", T->element);
+	}
+}
+
+int height(treeType T){
+	if(T == NULL) return 0;
+	int h1 = height(T->leftChild);
+	int h2 = height(T->rightChild);
+	int maxH = h1 > h2 ? h1 : h2;
+	return maxH + 1;
+}
+
+// void printTree(treeType T){
+// 	if(T == NULL){
+// 		return;
+// 	}
+// 	printf("Nut %s: ", T->element.country);
+// 	if(T->leftChild != NULL){
+// 		printf("%s ", T->leftChild->element.country);
+// 	}
+// 	if(T->rightChild != NULL){
+// 		printf("%s ", T->rightChild->element.country);
+// 	}
+// 	printf("\n");
+// 	printTree(T->leftChild);
+// 	printTree(T->rightChild);
+// }
+
+
+
+
